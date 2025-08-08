@@ -1,19 +1,17 @@
----
+# 🦋 Crypto Sentiment Trading Analysis
 
-# ⋆.˚🦋༘⋆ Crypto Sentiment Trading Analysis
-
-**Repository:** Crypto-Sentiment-Trading-Analysis
+**Repository:** Crypto-Sentiment-Trading-Analysis  
 **Goal:** Understand how Bitcoin market sentiment (Fear & Greed Index) impacts trader behavior and profitability using real Hyperliquid exchange data.
 
 ---
 
-## ⋆.˚🦋༘⋆ Overview
+## 🦋 Overview
 
 This project analyzes historical **Bitcoin sentiment** and **real trader data** to identify profitable trading patterns. It includes a full pipeline from **data ingestion** to **visual EDA**, **strategy logic**, and **correlation analysis**, enabling insights for sentiment-driven trading strategies.
 
 ---
 
-## ⋆.˚🦋༘⋆ Dataset
+## 🦋 Dataset
 
 * **Fear & Greed Index**: Historical sentiment data
 * **Hyperliquid Trades**: Real trader executions — PnL, positions, timestamps
@@ -22,27 +20,25 @@ This project analyzes historical **Bitcoin sentiment** and **real trader data** 
 
 ---
 
-## ⋆.˚🦋༘⋆ Key Insights
+## 🦋 Key Insights
 
-* **Extreme Fear + Long positions** → Highest average profits (up to ±\$15K)
-* **Fear periods** → Most active, consistent trading (\~62K trades)
+* **Extreme Fear + Long positions** → Highest average profits (up to ±$15K)
+* **Fear periods** → Most active, consistent trading (~62K trades)
 * **Extreme Greed** → Risky with mixed shorting results
 * **Asset Imbalance** → One asset dominates 70K+ trades
 
 ---
 
-## ⋆.˚🦋༘⋆ Analysis Pipeline
+## 🦋 Analysis Pipeline
 
-### ⋆.˚🦋༘⋆ Main Stages:
-
+### Main Stages:
 1. **Data Cleaning**: Null handling, timestamp alignment
 2. **Feature Engineering**: PnL per unit, trade scaling, position metrics
 3. **EDA & Correlation**: Heatmaps, scatter plots, distribution analysis
 4. **Sentiment-based Strategy Logic**: Rule-based contrarian logic
 5. **Validation**: Profitability vs sentiment phase, position size, asset bias
 
-### ⋆.˚🦋༘⋆ Output Visuals:
-
+### Output Visuals:
 * `pnl_sentiment_boxplot.png`
 * `correlation_heatmap.png`
 * `trade_volume_analysis.png`
@@ -50,17 +46,15 @@ This project analyzes historical **Bitcoin sentiment** and **real trader data** 
 
 ---
 
-## ⋆.˚🦋༘⋆ Trading Strategy Logic
+## 🦋 Trading Strategy Logic
 
 ```python
 if sentiment == "Extreme Fear":
     strategy = "BUY (Long)"
     position_size = "Large"
-
 elif sentiment == "Fear":
     strategy = "BUY (Long)"
     position_size = "Medium"
-
 elif sentiment == "Extreme Greed":
     strategy = "SELL (Short)"
     position_size = "Small"
@@ -68,7 +62,7 @@ elif sentiment == "Extreme Greed":
 
 ---
 
-## ⋆.˚🦋༘⋆ Installation & Usage
+## 🦋 Installation & Usage
 
 ```bash
 # 1. Clone the repo
@@ -91,7 +85,7 @@ jupyter notebook notebooks/01_data_exploration.ipynb
 
 ---
 
-## ⋆.˚🦋༘⋆ Project Structure
+## 🦋 Project Structure
 
 ```
 crypto-sentiment-trader-analysis/
@@ -110,24 +104,50 @@ crypto-sentiment-trader-analysis/
 
 ---
 
-## ⋆.˚🦋༘⋆ Results Summary
+## 🦋 Technical Requirements
+
+```
+pandas>=1.5.0
+numpy>=1.20.0
+matplotlib>=3.5.0
+seaborn>=0.11.0
+plotly>=5.0.0
+jupyter>=1.0.0
+scikit-learn>=1.0.0
+```
+
+---
+
+## 🦋 Results Summary
 
 * **Best Strategy**: Extreme Fear → Long positions
 * **Trade Volume**: Fear periods dominate
-* **Profit Range**: ±\$15K in extreme sentiment
+* **Profit Range**: ±$15K in extreme sentiment
 * **Strategy Type**: Contrarian, sentiment-aligned
 
 ---
 
+## 🦋 Future Work
+
+- [ ] Real-time sentiment integration
+- [ ] Multi-exchange analysis
+- [ ] Machine learning model development
+- [ ] Backtesting framework
+- [ ] Risk management optimization
+
 ---
 
-## ⋆.˚🦋༘⋆ Contact
+## 🦋 Contact
 
 * **Email**: [kvrushalimay@gmail.com](mailto:kvrushalimay@gmail.com)
 * **LinkedIn**: [Vrushali Kadam](https://www.linkedin.com/in/vrushalikadam14/)
 
 ---
-## ⋆.˚🦋༘⋆ Credits 
+
+## 🦋 Credits
+
 **Vrushali Kadam** – Data analysis, pipeline development, visualization
 
-Let me know if you'd like to convert this into Markdown or re-upload it to your repo!
+---
+
+*This project was created as part of a data science assignment analyzing trader behavior and market sentiment relationships in cryptocurrency markets.*
