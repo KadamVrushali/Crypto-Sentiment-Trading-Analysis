@@ -92,19 +92,20 @@ seaborn>=0.11.0
 plotly>=5.0.0
 jupyter>=1.0.0
 ```
-
-## Installation & Usage
-
-```bash
-# Clone repository
-git clone https://github.com/[username]/crypto-sentiment-trader-analysis.git
+```
+# 1. Clone the repository
+git clone https://github.com/kadamvrushali/crypto-sentiment-trader-analysis.git
 cd crypto-sentiment-trader-analysis
 
-# Install requirements
+# 2. (Optional but recommended) Create a virtual environment
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+# 3. Install required dependencies
 pip install -r requirements.txt
 
-# Run analysis
-jupyter notebook notebooks/01_data_exploration.ipynb
+# 4. Run the main analysis pipeline
+python main.py
 ```
 
 ## Results
