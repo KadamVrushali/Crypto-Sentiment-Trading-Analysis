@@ -2,7 +2,7 @@
 
 # ⋆.˚🦋༘⋆ Crypto Sentiment Trading Analysis
 
-**Repository:** ``` Crypto-Sentiment-Trading-Analysis```
+**Repository:** Crypto-Sentiment-Trading-Analysis
 **Goal:** Understand how Bitcoin market sentiment (Fear & Greed Index) impacts trader behavior and profitability using real Hyperliquid exchange data.
 
 ---
