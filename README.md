@@ -46,19 +46,6 @@ This project analyzes historical **Bitcoin sentiment** and **real trader data** 
 
 ---
 
-## 🦋 Trading Strategy Logic
-
-```python
-if sentiment == "Extreme Fear":
-    strategy = "BUY (Long)"
-    position_size = "Large"
-elif sentiment == "Fear":
-    strategy = "BUY (Long)"
-    position_size = "Medium"
-elif sentiment == "Extreme Greed":
-    strategy = "SELL (Short)"
-    position_size = "Small"
-```
 
 ---
 
