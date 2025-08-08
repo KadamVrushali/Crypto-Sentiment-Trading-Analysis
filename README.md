@@ -1,160 +1,133 @@
-# Crypto Sentiment Trading Analysis
+---
 
-**Repository Name:** `crypto-sentiment-trader-analysis`
+# ⋆.˚🦋༘⋆ Crypto Sentiment Trading Analysis
 
-## Overview
+**Repository:** `crypto-sentiment-trader-analysis`
+**Goal:** Understand how Bitcoin market sentiment (Fear & Greed Index) impacts trader behavior and profitability using real Hyperliquid exchange data.
 
-This project analyzes the relationship between Bitcoin market sentiment (Fear & Greed Index) and trader performance using Hyperliquid trading data. The goal is to find patterns that can improve trading strategies in cryptocurrency markets.
+---
 
-## Dataset
+## ⋆.˚🦋༘⋆ Overview
 
-- **Bitcoin Market Sentiment**: Fear/Greed classification data
-- **Hyperliquid Trading Data**: Real trader execution data with PnL, position sizes, timestamps
-- **Time Period**: Historical trading data with sentiment alignment
-- **Size**: 200K+ trading records analyzed
+This project analyzes historical **Bitcoin sentiment** and **real trader data** to identify profitable trading patterns. It includes a full pipeline from **data ingestion** to **visual EDA**, **strategy logic**, and **correlation analysis**, enabling insights for sentiment-driven trading strategies.
 
-## Key Findings
+---
 
-### 💡 Main Insight
-**Extreme Fear periods create the best buying opportunities** despite having fewer trades.
+## ⋆.˚🦋༘⋆ Dataset
 
-### 📊 Results Summary
-- **Extreme Fear + Long trades**: Highest profit potential (±$15K range)
-- **Fear periods**: Most trading activity (62K trades) with steady returns
-- **Greed periods**: Mixed results, some short opportunities
-- **Asset concentration**: One coin dominates 70K+ trades
+* **Fear & Greed Index**: Historical sentiment data
+* **Hyperliquid Trades**: Real trader executions — PnL, positions, timestamps
+* **Time Span**: Historical match-aligned data
+* **Volume**: 200K+ trades processed
 
-## Analysis Approach
+---
 
-### Data Exploration
-1. **Market sentiment distribution** - Trade counts by Fear/Greed levels
-2. **PnL analysis** - Profit patterns across sentiment categories  
-3. **Correlation analysis** - Relationships between trading metrics
-4. **Position sizing** - How sentiment affects trade sizes
-5. **Asset distribution** - Trading concentration analysis
+## ⋆.˚🦋༘⋆ Key Insights
 
-### Visualization
-- Box plots for PnL distribution by sentiment
-- Correlation heatmaps for feature relationships
-- Bar charts for trading volume analysis
-- Scatter plots for multi-dimensional patterns
-- Violin plots for position size distributions
+* **Extreme Fear + Long positions** → Highest average profits (up to ±\$15K)
+* **Fear periods** → Most active, consistent trading (\~62K trades)
+* **Extreme Greed** → Risky with mixed shorting results
+* **Asset Imbalance** → One asset dominates 70K+ trades
 
-## Trading Strategy
+---
 
-### Simple Rules
+## ⋆.˚🦋༘⋆ Analysis Pipeline
+
+### ⋆.˚🦋༘⋆ Main Stages:
+
+1. **Data Cleaning**: Null handling, timestamp alignment
+2. **Feature Engineering**: PnL per unit, trade scaling, position metrics
+3. **EDA & Correlation**: Heatmaps, scatter plots, distribution analysis
+4. **Sentiment-based Strategy Logic**: Rule-based contrarian logic
+5. **Validation**: Profitability vs sentiment phase, position size, asset bias
+
+### ⋆.˚🦋༘⋆ Output Visuals:
+
+* `pnl_sentiment_boxplot.png`
+* `correlation_heatmap.png`
+* `trade_volume_analysis.png`
+* `position_size_distribution.png`
+
+---
+
+## ⋆.˚🦋༘⋆ Trading Strategy Logic
+
 ```python
-# Contrarian approach based on market sentiment
 if sentiment == "Extreme Fear":
     strategy = "BUY (Long)"
     position_size = "Large"
-    
+
 elif sentiment == "Fear":
-    strategy = "BUY (Long)" 
+    strategy = "BUY (Long)"
     position_size = "Medium"
-    
+
 elif sentiment == "Extreme Greed":
     strategy = "SELL (Short)"
     position_size = "Small"
 ```
 
-## Files Structure
+---
 
-```
-crypto-sentiment-trader-analysis/
-├── data/
-│   ├── fear_greed_index.csv
-│   └── hyperliquid_trades.csv
-├── notebooks/
-│   ├── 01_data_exploration.ipynb
-│   ├── 02_sentiment_analysis.ipynb
-│   └── 03_trading_strategy.ipynb
-├── plots/
-│   ├── pnl_sentiment_boxplot.png
-│   ├── correlation_heatmap.png
-│   ├── trade_volume_analysis.png
-│   └── position_size_distribution.png
-├── src/
-│   ├── data_processing.py
-│   ├── sentiment_analysis.py
-│   └── visualization.py
-├── README.md
-└── requirements.txt
-```
+## ⋆.˚🦋༘⋆ Installation & Usage
 
-## Technical Requirements
-
-```python
-pandas>=1.5.0
-numpy>=1.20.0
-matplotlib>=3.5.0
-seaborn>=0.11.0
-plotly>=5.0.0
-jupyter>=1.0.0
-```
-```
-# 1. Clone the repository
+```bash
+# 1. Clone the repo
 git clone https://github.com/kadamvrushali/crypto-sentiment-trader-analysis.git
 cd crypto-sentiment-trader-analysis
 
-# 2. (Optional but recommended) Create a virtual environment
+# 2. (Optional) Set up a virtual environment
 python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+source venv/bin/activate  # Windows: venv\Scripts\activate
 
-# 3. Install required dependencies
+# 3. Install dependencies
 pip install -r requirements.txt
 
-# 4. Run the main analysis pipeline
+# 4. Run full analysis
 python main.py
+
+# 5. (Optional) Explore individual notebooks
+jupyter notebook notebooks/01_data_exploration.ipynb
 ```
-
-## Results
-
-### Key Metrics
-- **Best Strategy**: Extreme Fear + Long positions
-- **Risk/Reward**: High volatility but positive expected value
-- **Trade Volume**: Fear periods generate 3x more activity
-- **Profit Range**: ±$15K in extreme sentiment periods
-
-### Business Value
-- Systematic trading approach based on market psychology
-- Risk-adjusted position sizing framework
-- Contrarian strategy validation with real market data
-- Scalable algorithm for automated trading
-
-## Methodology
-
-1. **Data Cleaning**: Handle missing values, align timestamps
-2. **Feature Engineering**: Calculate PnL per unit, position metrics
-3. **Exploratory Analysis**: Visualize patterns and correlations
-4. **Strategy Development**: Define rules based on findings
-5. **Validation**: Test approach across different market conditions
-
-## Limitations
-
-- Analysis based on historical data only
-- Single exchange (Hyperliquid) data source  
-- Market conditions may change over time
-- Requires proper risk management implementation
-
-## Future Work
-
-- Real-time sentiment integration
-- Multi-exchange analysis
-- Machine learning model development
-- Backtesting framework implementation
-- Risk management optimization
-
-## Contact
-
-For questions about this analysis or collaboration opportunities:
-- **Email**: kvrushalimay@gmail.com
-- **LinkedIn**: https://www.linkedin.com/in/vrushalikadam14/
 
 ---
 
-*This project was created as part of a data science assignment analyzing trader behavior and market sentiment relationships in cryptocurrency markets.*
+## ⋆.˚🦋༘⋆ Project Structure
 
-## License
+```
+crypto-sentiment-trader-analysis/
+├── data/                    # Raw data (sentiment, trades)
+├── notebooks/               # Jupyter EDA, strategy notebooks
+├── plots/                   # Saved visualizations
+├── src/                     # Core pipeline scripts
+│   ├── data_processing.py
+│   ├── sentiment_analysis.py
+│   ├── eda.py
+│   └── visualization.py
+├── main.py                  # Main analysis pipeline
+├── requirements.txt
+└── README.md
+```
 
-MIT License - see LICENSE file for details.
+---
+
+## ⋆.˚🦋༘⋆ Results Summary
+
+* **Best Strategy**: Extreme Fear → Long positions
+* **Trade Volume**: Fear periods dominate
+* **Profit Range**: ±\$15K in extreme sentiment
+* **Strategy Type**: Contrarian, sentiment-aligned
+
+---
+
+---
+
+## ⋆.˚🦋༘⋆ Contact
+
+* **Email**: [kvrushalimay@gmail.com](mailto:kvrushalimay@gmail.com)
+* **LinkedIn**: [Vrushali Kadam](https://www.linkedin.com/in/vrushalikadam14/)
+
+---
+## ⋆.˚🦋༘⋆ Credits 
+**Vrushali Kadam** – Data analysis, pipeline development, visualization
+
+Let me know if you'd like to convert this into Markdown or re-upload it to your repo!
