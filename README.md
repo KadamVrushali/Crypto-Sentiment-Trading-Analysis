@@ -38,14 +38,16 @@ This project analyzes historical **Bitcoin sentiment** and **real trader data** 
 4. **Sentiment-based Strategy Logic**: Rule-based contrarian logic
 5. **Validation**: Profitability vs sentiment phase, position size, asset bias
 
+
 ### Output Visuals:
-* `pnl_sentiment_boxplot.png`
+
+* `boxplot_pnl_vs_sentiment.png`
 * `correlation_heatmap.png`
-* `trade_volume_analysis.png`
-* `position_size_distribution.png`
-
----
-
+* `pairplot_selected_features.png`
+* `violin_size_sentiment.png`
+* `count_trades_by_sentiment.png`
+* `count_trades_by_top_15_coins.png`
+* `heatmap_sentiment_direction_profitability.png`
 
 ---
 
