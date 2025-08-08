@@ -88,12 +88,8 @@ crypto-sentiment-trader-analysis/
 
 ```
 pandas>=1.5.0
-numpy>=1.20.0
 matplotlib>=3.5.0
 seaborn>=0.11.0
-plotly>=5.0.0
-jupyter>=1.0.0
-scikit-learn>=1.0.0
 ```
 
 ---
