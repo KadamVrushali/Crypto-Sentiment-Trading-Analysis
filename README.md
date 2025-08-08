@@ -56,18 +56,11 @@ This project analyzes historical **Bitcoin sentiment** and **real trader data** 
 git clone https://github.com/kadamvrushali/crypto-sentiment-trader-analysis.git
 cd crypto-sentiment-trader-analysis
 
-# 2. (Optional) Set up a virtual environment
-python -m venv venv
-source venv/bin/activate  # Windows: venv\Scripts\activate
-
 # 3. Install dependencies
 pip install -r requirements.txt
 
 # 4. Run full analysis
 python main.py
-
-# 5. (Optional) Explore individual notebooks
-jupyter notebook notebooks/01_data_exploration.ipynb
 ```
 
 ---
