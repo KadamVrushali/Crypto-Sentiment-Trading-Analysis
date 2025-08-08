@@ -103,16 +103,6 @@ seaborn>=0.11.0
 
 ---
 
-## 🦋 Future Work
-
-- [ ] Real-time sentiment integration
-- [ ] Multi-exchange analysis
-- [ ] Machine learning model development
-- [ ] Backtesting framework
-- [ ] Risk management optimization
-
----
-
 ## 🦋 Contact
 
 * **Email**: [kvrushalimay@gmail.com](mailto:kvrushalimay@gmail.com)
